@@ -20,4 +20,9 @@ maxCalories = max(maxList)
 
 print(f'The reindeer who had the most calories had {maxCalories} calories')
 
+orderList = sorted(maxList)[::-1]
+
+topThree = orderList[0] + orderList[1] + orderList[2]
+
+print(f'The sum of the top three calories is {topThree}')
 
