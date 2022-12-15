@@ -33,3 +33,9 @@ let maxCals = maxList.reduce((a,b) => {
 });
 
 console.log(`The reindeer with the most calories had ${maxCals} calories`)
+
+const sortedCals = maxList.sort(function(a, b){return b-a});
+
+const topThree = sortedCals[0] + sortedCals [1] + sortedCals[2]
+
+console.log(`The sum of the top three calories is ${topThree}`)
