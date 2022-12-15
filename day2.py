@@ -70,13 +70,3 @@ for move in movesList:
             newScore += 7
 
 print(f'With the proper instructions the score is {newScore}')
-        
-
-
-
-    
-
-
-
-
-
