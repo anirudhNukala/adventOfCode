@@ -8,6 +8,7 @@ calList = []
 for item in newList:
     calList += [item.strip().split('\n')]
 
+
 for list in calList:
     for i in range(len(list)):
         list[i] = int(list[i])
@@ -26,3 +27,4 @@ topThree = orderList[0] + orderList[1] + orderList[2]
 
 print(f'The sum of the top three calories is {topThree}')
 
+calFile.close()
