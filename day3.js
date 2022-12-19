@@ -32,3 +32,29 @@ for (i = 0; i < commonLetters.length; i++) {
 }
 
 console.log(`The priority sum is ${prioritySum}`)
+console.log('')
+/* ---------------- Part 2 --------------------- */
+
+let threeList = []
+let j = 0
+while (j < rucksackList.length) {
+    threeList.push([rucksackList[j].split(''), rucksackList[j+1].split(''), rucksackList[j+2].split('')])
+    j += 3
+}
+
+let commonCharsArr = []
+for (i = 0; i < threeList.length; i++) {
+    commonCharsArr.push(threeList[i].reduce((a, b) => a.filter(c => b.includes(c))))
+}
+
+let newPrioritySum = 0
+for (i = 0; i < commonCharsArr.length; i++) {
+    if (commonCharsArr[i][0] in lowerDict) {
+        newPrioritySum += lowerDict[commonCharsArr[i][0]]
+    }
+    else if (commonCharsArr[i][0] in upperDict) {
+        newPrioritySum += upperDict[commonCharsArr[i][0]]
+    }
+}
+
+console.log(`The updated priority sum is ${newPrioritySum}`)
